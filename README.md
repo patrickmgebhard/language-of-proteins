@@ -1,4 +1,4 @@
-# language-of-proteins
+# Language of Proteins
 Repository for FourthBrain MLE-11 Capstone project 
 
 **Project Name:** Language of Proteins <br />
