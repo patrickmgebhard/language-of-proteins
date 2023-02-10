@@ -8,7 +8,7 @@ As of February 10th we iterated our models with the following results:<br />
 
 ACP: accuracy: 0.75, precision: 0.74, Recall: 0.76, f1 score: .75. Best model XGBClassifier found with TPOT<br/>
 AMP: accuracy: 0.83, precision: 0.83, Recall: 0.81, f1 score: .82. Best model XGBClassifier found with TPOT<br/>
-DNA_Binding: <br />
+DNA_Binding: accuracy: 0.63 precision: 0.6, Recall: 0.8, f1 score: .68 Best model GradientBoostingClassifier<br />
 
 baseline_acp.ipynb, baseline_amp.ipynb, baseline_dna.ipynb are the respective notebooks with the models
 
