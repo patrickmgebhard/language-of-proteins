@@ -12,4 +12,4 @@ DNA_Binding: <br />
 
 baseline_acp.ipynb, baseline_amp.ipynb, baseline_dna.ipynb are the respective notebooks with the models
 
-baseline_all.ipynb explores feature engineerings applied to all the proteins
+Protein Sequencing and Classification-2.ipynb explores feature engineering and classification applied to all the 3 classes of proteins. It uses Bag-of-Words to classify protein sequences.
