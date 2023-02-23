@@ -5,14 +5,19 @@ import streamlit as st
 import streamlit.components.v1 as components
 import numpy as np
 from utils import splitchain,contains_specific_letters,TransformACP,TransformAMP
-
+import platform
+from packaging import version
+if version.parse(platform.python_version()) < version.parse("3.8.0"):
+    import pickle5 as pickle
+else:
+   import pickle
 
 # save the model called exported_pipeline with
 # filename = 'xgb_acp_model.sav'
 # pickle.dump(exported_pipeline, open(filename, 'wb'))
 
 # load the models
-import pickle
+
 acp_model = pickle.load(open('xgb_acp_model.sav', 'rb'))
 amp_model = pickle.load(open('xgb_amp_model.sav', 'rb'))
 dna_model = pickle.load(open('xgb_acp_model.sav', 'rb'))
