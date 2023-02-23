@@ -4,7 +4,7 @@ import plotly.figure_factory as ff
 import streamlit as st
 import streamlit.components.v1 as components
 import numpy as np
-from utils import splitchain,contains_specific_letters,TransformACP
+from utils import splitchain,contains_specific_letters,TransformACP,TransformAMP
 
 
 # save the model called exported_pipeline with
@@ -14,7 +14,7 @@ from utils import splitchain,contains_specific_letters,TransformACP
 # load the models
 import pickle
 acp_model = pickle.load(open('xgb_acp_model.sav', 'rb'))
-amp_model = pickle.load(open('xgb_acp_model.sav', 'rb'))
+amp_model = pickle.load(open('xgb_amp_model.sav', 'rb'))
 dna_model = pickle.load(open('xgb_acp_model.sav', 'rb'))
 
 # initialize test results
@@ -47,16 +47,21 @@ else:
         resultsacp = acp_model.predict(acp_sample)
         
         #AMP
-        #amp_sample = TransformAMP(x)
-        #resultsamp = acp_model.predict(amp_sample)
+        amp_sample = TransformAMP(x)
+        resultsamp = amp_model.predict(amp_sample)
         
         st.write("The sequence you entered is:", x)
         if resultsacp == 0: 
-            st.write("Not an Anicancer Peptide")
+            st.write("Not an Anticancer Peptide")
         elif resultsacp == 1:   
             st.write("It is an Anticancer Peptide")
         else:
             st.write('Undetermined ACP ') 
-
+        if resultsamp == 0: 
+            st.write("Not an Antimicriobial Peptide")
+        elif resultsamp == 1:   
+            st.write("It is an Antimicrobial Peptide")
+        else:
+            st.write('Undetermined AMP ') 
 
 
