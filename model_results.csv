@@ -1,0 +1,4 @@
+,Protein,Prediction Model,accuracy,Precision,recall,f1_score
+0,ACP,XGB,0.75,0.74,0.76,0.75
+1,AMP,XGB,0.83,0.83,0.81,0.82
+2,DNA_Binding,GradientBoost,0.63,0.6,0.8,0.68
